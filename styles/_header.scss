@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    flex-direction: column;
+    img {
+        margin-top: 15px;
+        max-width: 200px;
+    }
+    button {
+        border-radius: 25px;
+        border: 0px;
+        background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+        max-width: fit-content;
+        color: white;
+        padding: 10px;
+    }
+}
