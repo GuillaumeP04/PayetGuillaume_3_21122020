@@ -25,8 +25,37 @@ header button {
   padding: 10px;
 }
 
+.footer {
+  background-color: #363636;
+  color: white;
+}
+
+.footer--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  margin: 20px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+}
+
+.footer img {
+  max-width: 150px;
+  margin: 15px;
+}
+
 body {
   font-family: Roboto;
+  margin: 0px;
 }
 
 .box {
