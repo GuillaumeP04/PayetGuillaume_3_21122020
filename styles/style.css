@@ -110,9 +110,41 @@
   margin: 15px 0px 15px 0px;
 }
 
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.section h2 {
+  text-align: center;
+}
+
+.section--container {
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px 25px 10px 25px;
+  margin: 10px;
+  background-color: #f3f3f3;
+}
+
+.section--container i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
 body {
   font-family: Roboto;
   margin: 0px;
+  background-color: #f3f3f3;
 }
 
 .box {
