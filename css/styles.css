@@ -51,6 +51,10 @@
           align-items: center;
 }
 
+.header--container__img {
+  background-color: white;
+}
+
 .main-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,20 +63,24 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main-prev {
+  width: 22%;
   border: black 2px solid;
   border-radius: 15px;
-  margin: 10px;
   text-decoration: none;
   color: black;
+  background-color: white;
 }
 
 .main-prev img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 250px;
   border-radius: 15px 15px 0px 0px;
 }
 

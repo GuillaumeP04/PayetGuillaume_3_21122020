@@ -1,0 +1,40 @@
+@import "./variables";
+@import "./header";
+@import "./section";
+@import "./footer";
+
+body {
+    font-family: Roboto;
+    margin: 0px;
+    background-color: rgb(243, 243, 243);
+}
+
+.box {
+    max-width: 1200px;
+    margin: auto;
+    margin: 0px 20px 0px 20px;
+
+}
+
+
+.main {
+
+    &-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    &-prev {
+        width: 22%;
+        border: black 2px solid;
+        border-radius: 15px;
+        text-decoration: none; 
+        color: black;
+        background-color: white;
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+    }
+    }
+}
