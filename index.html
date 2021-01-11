@@ -3,24 +3,23 @@
     <head>
         <title>Ohmyfood</title>
         <link href="css/fontawesome.css" rel="stylesheet">
-        <link href="css/styles.css" type="text/css" rel="stylesheet">
+        <link href="sass/main.css" type="text/css" rel="stylesheet">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header class="header box">
-            <div class="header--container__img">
-                <img src="img/ohmyfood.png" alt="Logo">
+        <header class="header">
+            <div class="header__container--img">
+                <img class="header__img" src="img/ohmyfood.png" alt="Logo">
             </div>
-            <div class="header--container__location">
-                <i class="fas fa-map-marker-alt"></i>
-                
+            <div class="header__container--location">
+                <i class="fas fa-map-marker-alt header__location--icon"></i>
                 <span>Paris, Belleville</span>
             </div>
-            <div class="header--container__text">
-                <h1>Réserver le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, séléctionnés pour nos soins.</p>
-                <button>Explorer nos restaurants</button>
+            <div class="header__container--text box">
+                <h1 class="header__heading">Réserver le menu qui vous convient</h1>
+                <p class="header__paragraph">Découvrez des restaurants d'exception, séléctionnés pour nos soins.</p>
+                <button class="header__button">Explorer nos restaurants</button>
             </div>
         </header>
         <section class="section">

@@ -1,12 +1,7 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-        margin-top: 15px;
-        max-width: 200px;
-    }
-    button {
+    display: block;
+
+    &__button {
         border-radius: 25px;
         border: 0px;
         background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -15,19 +10,36 @@
         padding: 10px;
         text-align: center;
     }
-    h1 {
+    &__heading {
         text-align: center;
         margin: 0px;
     }
-    p {
+    &__paragraph {
         text-align: center;
     }
-    &--container__text {
+    &__container--text {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 25px 0px;
     }
-    &--container__img {
+    &__container--img {
         background-color: white;
+        display: flex;
+        justify-content: center;
+    }    
+    &__img {
+        max-width: 200px;
+        margin: 15px 0px;
+    }
+    &__container--location {
+        background-color: #eaeaea;
+        display: flex;
+        justify-content: center;
+        box-shadow: inset 1px 4px 7px #d4d4d4;
+        padding: 15px;
+    }
+    &__location--icon {
+        margin-right: 15px;
     }
 }
