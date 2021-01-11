@@ -1,12 +1,14 @@
 @import "./variables";
 @import "./header";
-@import "./section";
+@import "./fonctionnement";
 @import "./footer";
 
 body {
     font-family: Roboto;
     margin: 0px;
     background-color: #f6f6f6;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .box {

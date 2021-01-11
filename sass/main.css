@@ -78,35 +78,84 @@
   margin-right: 15px;
 }
 
-.section {
+.fonctionnement {
+  background-color: white;
+  padding: 5px 0px 35px 0px;
+}
+
+.fonctionnement__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fonctionnement h2 {
+  text-align: start;
+  margin-left: 15px;
+}
+
+.fonctionnement__container {
+  border-radius: 20px;
+  padding: 25px 50px;
+  margin: 10px;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  -webkit-box-shadow: 2px 5px 20px 0px lightgray;
+          box-shadow: 2px 5px 20px 0px lightgray;
 }
 
-.section h2 {
+.fonctionnement__container:hover {
+  background-color: #f5edff;
+}
+
+.fonctionnement__container:hover i {
+  color: #9356DC;
+}
+
+.fonctionnement__container--number {
+  position: absolute;
+  left: -10px;
   text-align: center;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  padding: 5px;
 }
 
-.section--container {
-  border: 2px solid black;
-  border-radius: 15px;
-  padding: 10px 25px 10px 25px;
-  margin: 10px;
-  background-color: #f3f3f3;
-}
-
-.section--container i {
-  margin-right: 10px;
+.fonctionnement__container i {
+  margin-right: 25px;
   font-size: 20px;
+}
+
+@media all and (max-width: 1040px) {
+  .fonctionnement__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 15px;
+  }
 }
 
 .footer {
@@ -150,6 +199,8 @@ body {
   font-family: Roboto;
   margin: 0px;
   background-color: #f6f6f6;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .box {
