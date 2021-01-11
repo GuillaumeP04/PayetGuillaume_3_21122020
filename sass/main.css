@@ -209,7 +209,7 @@ body {
   margin: 0px 20px 0px 20px;
 }
 
-.main-container {
+.main__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,21 +220,53 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0px 0px 40px 0px;
 }
 
-.main-prev {
+.main__prev {
   width: 22%;
-  border: black 2px solid;
   border-radius: 15px;
   text-decoration: none;
   color: black;
   background-color: white;
+  position: relative;
+  -webkit-box-shadow: 6px 7px 20px lightgrey;
+          box-shadow: 6px 7px 20px lightgrey;
 }
 
-.main-prev img {
+.main__prev--bold {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0px 10px 10px;
+}
+
+.main__prev--ville {
+  margin: 0px 0px 20px 10px;
+  font-size: 20px;
+}
+
+.main__prev img {
   width: 100%;
+  height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0px 0px;
+}
+
+.main__prev i {
+  position: absolute;
+  right: 20px;
+  bottom: 35px;
+  font-size: 25px;
+}
+
+.main__prev span {
+  font-size: 15px;
+  padding: 7px;
+  background-color: #99e2d0;
+  color: #269d80;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 /*# sourceMappingURL=main.css.map */

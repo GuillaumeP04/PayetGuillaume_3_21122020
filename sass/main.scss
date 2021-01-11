@@ -20,23 +20,49 @@ body {
 
 
 .main {
-
-    &-container {
+    &__container {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+        padding: 0px 0px 40px 0px;
     }
-    &-prev {
+    &__prev {
         width: 22%;
-        border: black 2px solid;
         border-radius: 15px;
         text-decoration: none; 
         color: black;
         background-color: white;
+        position: relative;
+        box-shadow: 6px 7px 20px lightgrey;;
+        &--bold {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 10px 0px 10px 10px;
+        }
+        &--ville {
+            margin: 0px 0px 20px 10px;
+            font-size: 20px;
+        }
     img {
         width: 100%;
+        height: 170px;
         object-fit: cover;
         border-radius: 15px 15px 0px 0px;
+    }
+    i {
+        position: absolute;
+        right: 20px;
+        bottom: 35px;
+        font-size: 25px;
+    }
+    span {
+        font-size: 15px;
+        padding: 7px;
+        background-color: #99e2d0;
+        color: #269d80;
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
     }
 }
