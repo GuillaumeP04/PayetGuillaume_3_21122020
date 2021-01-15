@@ -170,23 +170,23 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .header__arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-self: flex-start;
 }
 
 .header__arrow--prev {
   font-size: 30px;
   color: black;
+}
+
+.header__img {
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .menu__img img {

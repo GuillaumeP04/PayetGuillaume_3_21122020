@@ -3,15 +3,17 @@
         display: flex;
         align-items: center;
         flex-direction: row;
-        justify-content: center;
     }
     &__arrow {
         display: flex;
-        justify-content: flex-start;
+        justify-self: flex-start;
         &--prev {
             font-size: 30px;
             color: black;
         }
+    }
+    &__img {
+        justify-self: center;
     }
 }
 
