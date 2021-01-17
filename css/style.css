@@ -57,10 +57,17 @@
 .header__arrow {
   display: flex;
   justify-self: flex-start;
+  margin-left: 15px;
 }
 .header__arrow--prev {
   font-size: 30px;
   color: black;
+}
+.header__logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__img {
   justify-self: center;
