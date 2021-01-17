@@ -86,7 +86,6 @@
   height: 200px;
   background: url(../img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
-  object-fit: cover;
 }
 .menu__container {
   display: flex;
@@ -107,6 +106,9 @@
   width: 100%;
   background-color: white;
   position: relative;
+}
+.menu__prev--title h1 {
+  font-family: Shrikhand, cursive;
 }
 .menu__prev--bold {
   font-weight: bold;

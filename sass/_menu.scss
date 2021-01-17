@@ -56,6 +56,11 @@
         width: 100%;
         background-color: white;
         position: relative;
+        &--title {
+            h1 {
+                font-family: Shrikhand, cursive;
+            }
+        }
         &--bold {
             font-weight: bold;
             font-size: 18px;
