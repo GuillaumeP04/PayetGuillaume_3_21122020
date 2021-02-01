@@ -85,6 +85,45 @@
         width: 100%;
         background-color: white;
         position: relative;
+        &:hover{
+            animation-name: check;
+            animation-duration: 2000ms;
+            animation-delay: 500ms;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-direction: initial;
+            animation-fill-mode: both;
+        }
+        &--check {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 66px;
+            width: 50px;
+            border-radius: 0px 15px 15px 0px;
+            background-color: #99e2d0;
+            animation-name: check_sliding;
+            animation-duration: 2000ms;
+            animation-delay: 500ms;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-direction: initial;
+            animation-fill-mode: both;
+        }
+        i {
+            color: white;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            font-size: 30px;
+            animation-name: check_rotating;
+            animation-duration: 2000ms;
+            animation-delay: 500ms;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-direction: initial;
+            animation-fill-mode: both;
+        }
         &--bold {
             font-weight: bold;
             font-size: 18px;
@@ -93,6 +132,8 @@
         &--light {
             margin: 10px 0px 10px 10px;
             font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         span {
             font-weight: bold;
@@ -124,7 +165,7 @@
             margin: 30px 0px 30px 0px;
             font-size: 15px;
             &:hover {
-                filter: brightness(120%);
+                filter: brightness(110%);
                 cursor: pointer;
             }
         }
@@ -149,6 +190,7 @@
         animation-duration: 2000ms;
         animation-delay: 300ms;
         animation-timing-function: ease;
+        animation-iteration-count: 1;
         animation-direction: initial;
         animation-fill-mode: both;
         }
@@ -157,6 +199,7 @@
         animation-duration: 2000ms;
         animation-delay: 500ms;
         animation-timing-function: ease;
+        animation-iteration-count: 1;
         animation-direction: initial;
         animation-fill-mode: both;
         }
@@ -165,6 +208,7 @@
         animation-duration: 2000ms;
         animation-delay: 700ms;
         animation-timing-function: ease;
+        animation-iteration-count: 1;
         animation-direction: initial;
         animation-fill-mode: both;
         }
@@ -173,9 +217,37 @@
         animation-duration: 2000ms;
         animation-delay: 900ms;
         animation-timing-function: ease;
+        animation-iteration-count: 1;
         animation-direction: initial;
         animation-fill-mode: both;
         }
+    }
+}
+
+@keyframes check {
+    0% {
+
+    }
+    100% {
+
+    }
+}
+
+@keyframes check-sliding {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes check_rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
