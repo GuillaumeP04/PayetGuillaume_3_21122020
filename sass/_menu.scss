@@ -85,15 +85,6 @@
         width: 100%;
         background-color: white;
         position: relative;
-        &:hover{
-            animation-name: check;
-            animation-duration: 2000ms;
-            animation-delay: 500ms;
-            animation-timing-function: ease;
-            animation-iteration-count: 1;
-            animation-direction: initial;
-            animation-fill-mode: both;
-        }
         &--check {
             position: absolute;
             right: 0px;
@@ -178,10 +169,23 @@
                 font-size: 35px;
                 font-family: Shrikhand, cursive;
             }
-            i {
-                font-size: 25px;
-                margin-right: 10px;
-            } 
+        }
+    }
+    &__heart {
+        font-size: 25px;
+        &:hover > &--color {
+            color: red;
+            transition: opacity linear 2000ms;
+            opacity: 1;
+        }
+        &--bw {
+            opacity: 1;
+            position: absolute;
+            z-index: 2;
+        }
+        &--color {
+            opacity: 0;
+            z-index: 1;
         }
     }
     &__loader {
@@ -221,15 +225,6 @@
         animation-direction: initial;
         animation-fill-mode: both;
         }
-    }
-}
-
-@keyframes check {
-    0% {
-
-    }
-    100% {
-
     }
 }
 
