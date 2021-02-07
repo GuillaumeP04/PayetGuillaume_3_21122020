@@ -85,15 +85,8 @@
         width: 100%;
         background-color: white;
         position: relative;
-        &--check {
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            height: 66px;
-            width: 50px;
-            border-radius: 0px 15px 15px 0px;
-            background-color: #99e2d0;
-            animation-name: check_sliding;
+        &:hover > &--check {
+            animation-name: check;
             animation-duration: 2000ms;
             animation-delay: 500ms;
             animation-timing-function: ease;
@@ -101,12 +94,7 @@
             animation-direction: initial;
             animation-fill-mode: both;
         }
-        i {
-            color: white;
-            position: absolute;
-            right: 10px;
-            top: 20px;
-            font-size: 30px;
+        &:hover > i {
             animation-name: check_rotating;
             animation-duration: 2000ms;
             animation-delay: 500ms;
@@ -115,23 +103,64 @@
             animation-direction: initial;
             animation-fill-mode: both;
         }
+        &--check {
+            opacity: 0;
+            z-index: 1;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 66px;
+            width: 50px;
+            border-radius: 0px 15px 15px 0px;
+            background-color: #99e2d0;
+            animation-name: check_sliding;
+            animation-duration: 1000ms;
+            animation-delay: 300ms;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-direction: initial;
+            animation-fill-mode: both;
+        }
+        i {
+            z-index: 2;
+            color: white;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            font-size: 30px;
+        }
+        &--text {
+            max-width: 350px;
+            width: 100%;
+        }
+        &--container {
+            display: flex;
+            justify-content: space-between;
+            max-width: calc(100% - 3rem);
+        }
         &--bold {
             font-weight: bold;
             font-size: 18px;
-            margin: 10px 0px 10px 10px;
+            margin: 10px 0px 0px 10px;
         }
         &--light {
             margin: 10px 0px 10px 10px;
             font-size: 13px;
             overflow: hidden;
             text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+            max-width: calc(100% - 3rem);
         }
-        span {
+        &--price {
+            width: 3rem;
+            padding: 0px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 10px;
+            font-size: 18px;
             font-weight: bold;
-            font-size: 17px;
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
         }
         &--dish {
             display: block;
@@ -228,83 +257,6 @@
     }
 }
 
-@keyframes check-sliding {
-    0% {
-        transform: translateX(100px);
-    }
-    100% {
-        transform: translateX(0px);
-    }
-}
-
-@keyframes check_rotating {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes menu_loading-one {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    50% {
-        opacity: .85;
-        transform: scale(1.01);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes menu_loading-two {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    50% {
-        opacity: .85;
-        transform: scale(1.01);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes menu_loading-three {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    50% {
-        opacity: .85;
-        transform: scale(1.01);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes menu_loading-four {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    50% {
-        opacity: .85;
-        transform: scale(1.01);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 @media all and (max-width:600px) {
     .menu__prev--title {
         h1 {
