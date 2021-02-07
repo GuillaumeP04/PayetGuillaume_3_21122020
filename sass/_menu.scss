@@ -85,26 +85,31 @@
         width: 100%;
         background-color: white;
         position: relative;
-        &:hover > &--check {
+        &:hover &--check {
             animation-name: check;
-            animation-duration: 2000ms;
-            animation-delay: 500ms;
+            animation-duration: 1000ms;
             animation-timing-function: ease;
             animation-iteration-count: 1;
             animation-direction: initial;
             animation-fill-mode: both;
         }
-        &:hover > i {
+        &:hover i {
             animation-name: check_rotating;
-            animation-duration: 2000ms;
-            animation-delay: 500ms;
+            animation-duration: 1000ms;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-direction: initial;
+            animation-fill-mode: both;
+        }
+        &:hover &--price {
+            animation-name: price-sliding;
+            animation-duration: 1000ms;
             animation-timing-function: ease;
             animation-iteration-count: 1;
             animation-direction: initial;
             animation-fill-mode: both;
         }
         &--check {
-            opacity: 0;
             z-index: 1;
             position: absolute;
             right: 0px;
@@ -125,9 +130,9 @@
             z-index: 2;
             color: white;
             position: absolute;
-            right: 10px;
-            top: 20px;
-            font-size: 30px;
+            right: 12px;
+            top: 22px;
+            font-size: 25px;
         }
         &--text {
             max-width: 350px;

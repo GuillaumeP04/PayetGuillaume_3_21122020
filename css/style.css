@@ -133,26 +133,31 @@
   background-color: white;
   position: relative;
 }
-.menu__prev:hover > .menu__prev--check {
+.menu__prev:hover .menu__prev--check {
   animation-name: check;
-  animation-duration: 2000ms;
-  animation-delay: 500ms;
+  animation-duration: 1000ms;
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-direction: initial;
   animation-fill-mode: both;
 }
-.menu__prev:hover > i {
+.menu__prev:hover i {
   animation-name: check_rotating;
-  animation-duration: 2000ms;
-  animation-delay: 500ms;
+  animation-duration: 1000ms;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: initial;
+  animation-fill-mode: both;
+}
+.menu__prev:hover .menu__prev--price {
+  animation-name: price-sliding;
+  animation-duration: 1000ms;
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-direction: initial;
   animation-fill-mode: both;
 }
 .menu__prev--check {
-  opacity: 0;
   z-index: 1;
   position: absolute;
   right: 0px;
@@ -173,9 +178,9 @@
   z-index: 2;
   color: white;
   position: absolute;
-  right: 10px;
-  top: 20px;
-  font-size: 30px;
+  right: 12px;
+  top: 22px;
+  font-size: 25px;
 }
 .menu__prev--text {
   max-width: 350px;
@@ -315,12 +320,21 @@
     transform: rotate(720deg);
   }
 }
-@media all and (max-width: 1040px) {
-  .fonctionnement__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;
+@keyframes loader {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+    z-index: 5555;
+  }
+  50% {
+    transform: scale(1.2);
+    z-index: 5555;
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    z-index: -5555;
   }
 }
 @keyframes check {
@@ -341,6 +355,14 @@
   100% {
     opacity: 1;
     transform: rotate(360deg);
+  }
+}
+@keyframes price-sliding {
+  0% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
 @keyframes menu_loading-one {
@@ -591,21 +613,12 @@ body {
   font-size: 20px;
 }
 
-@keyframes loader {
-  0% {
-    transform: scale(1);
-    opacity: 0.85;
-    z-index: 5555;
-  }
-  50% {
-    transform: scale(1.2);
-    z-index: 5555;
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-    z-index: -5555;
+@media all and (max-width: 1040px) {
+  .fonctionnement__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
   }
 }
 @media all and (max-width: 600px) {
