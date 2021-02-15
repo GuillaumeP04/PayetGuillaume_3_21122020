@@ -136,7 +136,9 @@
   overflow: hidden;
 }
 .menu__prev:hover .menu__prev--check {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   animation-name: check;
   animation-duration: 1000ms;
   animation-timing-function: ease;
@@ -181,7 +183,6 @@
 .menu__prev i {
   z-index: 2;
   color: white;
-  position: absolute;
   right: 12px;
   top: 22px;
   font-size: 25px;
@@ -189,6 +190,7 @@
 .menu__prev--text {
   max-width: 350px;
   width: 100%;
+  overflow: hidden;
 }
 .menu__prev--container {
   display: flex;
