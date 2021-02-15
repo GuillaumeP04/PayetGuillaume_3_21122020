@@ -13,8 +13,9 @@
   font-size: 15px;
 }
 .header__button:hover {
-  filter: brightness(120%);
+  filter: brightness(115%);
   cursor: pointer;
+  box-shadow: 0px 0px 20px 2px grey;
 }
 .header__heading {
   text-align: center;
@@ -132,8 +133,10 @@
   width: 100%;
   background-color: white;
   position: relative;
+  overflow: hidden;
 }
 .menu__prev:hover .menu__prev--check {
+  display: block;
   animation-name: check;
   animation-duration: 1000ms;
   animation-timing-function: ease;
@@ -144,6 +147,7 @@
 .menu__prev:hover i {
   animation-name: check_rotating;
   animation-duration: 1000ms;
+  animation-delay: 500ms;
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-direction: initial;
@@ -158,17 +162,17 @@
   animation-fill-mode: both;
 }
 .menu__prev--check {
+  display: none;
   z-index: 1;
   position: absolute;
   right: 0px;
   top: 0px;
-  height: 66px;
+  height: 100%;
   width: 50px;
   border-radius: 0px 15px 15px 0px;
   background-color: #99e2d0;
   animation-name: check_sliding;
   animation-duration: 1000ms;
-  animation-delay: 300ms;
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-direction: initial;
@@ -189,7 +193,6 @@
 .menu__prev--container {
   display: flex;
   justify-content: space-between;
-  max-width: calc(100% - 3rem);
 }
 .menu__prev--bold {
   font-weight: bold;
@@ -239,8 +242,9 @@
   font-size: 15px;
 }
 .menu__prev--button:hover {
-  filter: brightness(110%);
+  filter: brightness(115%);
   cursor: pointer;
+  box-shadow: 0px 0px 20px 2px grey;
 }
 .menu__prev--title {
   display: flex;
@@ -250,7 +254,7 @@
 }
 .menu__prev--title h1 {
   font-size: 35px;
-  font-family: Shrikhand, cursive;
+  font-family: Shrikhand;
 }
 .menu__heart {
   font-size: 25px;
@@ -359,10 +363,10 @@
 }
 @keyframes price-sliding {
   0% {
-    transform: translateX(50px);
+    transform: translateX(0px);
   }
   100% {
-    transform: translateX(0px);
+    transform: translateX(-50px);
   }
 }
 @keyframes menu_loading-one {
@@ -467,6 +471,14 @@
     align-self: flex-start;
   }
 }
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../font/Shrikhand.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../font/Roboto-Regular.ttf);
+}
 body {
   font-family: Roboto;
   margin: 0px;
@@ -504,6 +516,7 @@ body {
 }
 .loading img {
   object-fit: cover;
+  width: 280px;
 }
 .loading__spinner {
   margin-top: 50px;

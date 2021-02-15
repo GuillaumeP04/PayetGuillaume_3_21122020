@@ -49,10 +49,10 @@
 
 @keyframes price-sliding {
     0% {
-        transform: translateX(50px);
+        transform: translateX(0px);
     }
     100% {
-        transform: translateX(0px);
+        transform: translateX(-50px);
     }
 }
 

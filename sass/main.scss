@@ -4,6 +4,14 @@
 @import "./animation";
 @import "./footer";
 
+@font-face {
+    font-family: "Shrikhand";
+    src: url(../font/Shrikhand.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../font/Roboto-Regular.ttf);
+}
 body {
     font-family: Roboto;
     margin: 0px;
@@ -21,6 +29,7 @@ body {
 .loading {
     & img {
         object-fit: cover;
+        width: 280px;
     }
     position: fixed;
     top: 0;
